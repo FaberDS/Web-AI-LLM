@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>package.json</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="summarizer" class="card">
+        <h2>Summarizer API</h2>
+        <a href="https://developer.chrome.com/docs/ai/summarizer-api"
+          >Summarizer API doc</a
+        >
+        <textarea id="inputText" type="text">
+US-Präsident Präsident Donald Trump oder die Corona-Pandemie sind beide mit dem gleichen Phänomen behaftet: Fake News – falsche Nachrichten, die zum Beispiel über die Anzahl der Zuschauer bei der Amtseinführung Trumps verbreitet oder vielfach mit Meldungen über das Corona-Virus in Verbindung gebracht werden.
+          Dabei sind Fake News nichts Neues. In der Geschichte der Menschheit hat es sie schon immer gegeben. Ebenso Menschen, die an sie glauben. Bereits in der Antike ließen Machthaber falsche Nachrichten streuen, um ihre Gegner auszuschalten. Neu ist heute die Dimension, wie schnell und häufig sich Fake News verbreiten können. Das Internet macht es möglich. Außerdem versuchen Algorithmen, uns von bestimmten Dingen zu überzeugen und uns gezielt Nachrichten zu unseren Interessensblasen zukommen zu lassen.
+          Was es mit Fake News genau auf sich hat, welche teils gefährlichen Auswirkungen sie haben können, wer sie verbreitet, wie sie strafrechtlich einzuordnen sind und wie man Fake News erkennt erfahren Sie unter anderem in diesem Dossier.</textarea
+        >
+        <div id="output" class="output">...</div>
+        <div class="settings">
+          <label for="summaryType">Summary Type:</label>
+
+          <select name="summaryType" id="summaryTypes">
+            <option value="headline">Headline</option>
+            <option value="key-points">Key-Points</option>
+            <option value="tldr">tldr</option>
+            <option value="teaser">Teaser</option>
+          </select>
+          <label for="lengthType">Summary Type:</label>
+          <select name="lengthType" id="lengthType">
+            <option value="short">short</option>
+            <option value="medium">Medium</option>
+            <option value="long">Long</option>
+          </select>
+        </div>
+        <button id="trigger">Summarize</button>
+      </div>
+      <div id="llm" class="card">
+        <h2>Prompt API</h2>
+        <a href="https://developer.chrome.com/docs/ai/prompt-api"
+          >Prompt API doc</a
+        >
+        <textarea id="llmInput" type="text">Tell me a joke </textarea>
+        <div id="llmOutput" class="output">...</div>
+        <button id="prompt">Prompt</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
